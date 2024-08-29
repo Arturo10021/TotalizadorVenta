@@ -1,15 +1,14 @@
-import sumar from "./sumador";
+import mostrarItemsCant from "./Venta";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+
+const cantidad = document.querySelector("#cantidad");
+const form = document.querySelector("#form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const NumeroCantidad = Number.parseInt(cantidad.value);
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = "<p> La cantidad de items es: " + mostrarItemsCant(NumeroCantidad) + "</p>";
 });
